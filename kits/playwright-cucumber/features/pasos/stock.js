@@ -19,3 +19,27 @@ const { expect } = require('@playwright/test');
  *   Then('veo el aviso {string}', ...)                         → comprobar que algún aviso contiene ese texto
  *   Then('el carrito sigue vacío', ...)                        → comprobar que se ve «Tu carrito está vacío.»
  */
+
+When('intento agregar {int} unidades de {string}', async function (cantidad, producto) {
+    const tarjeta = this.page.locator(".rounded-lg").
+        filter({
+            has: this.page.getByRole("heading", {
+                name: producto,
+                level: 3,
+            })
+        });
+    await tarjeta.getByRole("spinbutton").fill(`${cantidad}`);
+    await tarjeta.getByRole("button", { name: "Agregar" }).click();
+});
+
+Then('veo el aviso {string}', async function (aviso) {
+    expect(this.avisos).toEqual(
+        expect.arrayContaining([
+            expect.stringContaining(aviso),
+        ])
+    );
+});
+
+Then('el carrito sigue vacío', async function () {
+    await expect(this.page.locator('p:has-text("Tu carrito está vacío.")')).toBeVisible();
+});

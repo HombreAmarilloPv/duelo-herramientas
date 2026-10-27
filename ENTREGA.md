@@ -121,6 +121,18 @@ Abran el tablero de la clase (el enlace lo da el docente) y respondan **con dato
 ☐ `ADR.md` completo (una página, con consecuencias negativas y qué nos haría cambiar de opinión)  
 ☐ `medidas.json`, `medidas-control.json` y `autoinforme.json` en el repositorio, con `git push`
 
+| Criterio | Peso | Selenium | Cypress | Playwright | ¿Por qué ese peso? · Evidencia de los puntajes |
+|---|---:|:---:|:---:|:---:|---|
+| 1 · Encaje | 0 | 3 | 4 | 5 | Se adapta facil a las paginas web |
+| 2 · Cobertura | 0 | 4 | 3 | 5 | cubre de manera nativa chrome |
+| 3 · Estabilidad | 0 | 3 | 5 | 5 | Ofrece auto-waiting nativo en elementos web para clics, texto e interacciones. Elimina casi por completo las esperas manuales |
+| 4 · Diagnóstico | 0 | 3 | 5 | 5 | ofrece herramientas automáticas paso a paso |
+| 5 · Velocidad | 0 | 3 | 4 | 5 | Ejecución ultra rápida conectándose por WebSocket a los motores de renderizado. Soporta paralelismo nativo multihilo dividiendo escenarios por workers. |
+| 6 · Integración | 0 | 4 | 4 | 4 | Se integra fácilmente en CI/CD mediante scripts Node.js. Genera reportes en HTML, JUnit y Allure, y se conecta con Jira a través de Xray/Zephyr |
+| 7 · Comunidad y futuro | 0 | 3 | 4 | 5 | Playwright es mantenido activamente por Microsoft con actualizaciones mensuales. Cucumber es el estándar BDD respaldado por una enorme comunidad open-source. |
+| 8 · Costo total | 0 | 3 | 4 | 5 | 100% código abierto y gratuito (sin licencias). Bajo costo de mantenimiento y paralelización nativa sin pagar servicios extra. |
+| **Total ponderado** (máx. 5,00) | **0** | **** | **** | **** |  |
+
 **Nuestra recomendación en una frase:**
 
 > _…_

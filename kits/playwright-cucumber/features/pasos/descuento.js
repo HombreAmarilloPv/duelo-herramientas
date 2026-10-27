@@ -12,3 +12,27 @@ const { expect } = require('@playwright/test');
  * Pista: el paso de agregar se parece mucho al de features/pasos/stock.js. ¿Lo van a repetir o a compartir?
  * (Con Cucumber, un paso definido en un archivo sirve a TODOS los escenarios.)
  */
+
+Given('que agrego {int} unidad(es) de {string} al carrito', async function (cantidad, producto) {
+    // Encuentra la tarjeta del producto por su nombre
+    const productCard = this.page.locator(".rounded-lg").
+        filter({
+            has: this.page.getByRole("heading", {
+                name: producto,
+                level: 3,
+            })
+        });
+    await productCard.getByRole("spinbutton").fill(`${cantidad}`);
+    await productCard.getByRole("button", { name: "Agregar" }).click();
+});
+
+When('aplico el código {string}', async function (codigo) {
+    await this.page.getByPlaceholder("Código de descuento").fill(codigo);
+    await this.page.getByRole("button", { name: "Aplicar" }).click();
+});
+
+Then('el descuento es {string}', async function (descuento) {
+    const discount = await this.page.locator(`dt:has-text("Descuento") + dd`)
+    console.log(descuento);
+    await expect(discount).toContainText(descuento);
+});
