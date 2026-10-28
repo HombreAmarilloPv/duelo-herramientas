@@ -1,19 +1,19 @@
 {
-  "equipo": "",
-  "integrantes": [],
-  "escenario": "",
-  "usoDeIA": "",
+  "equipo": "Cucumber",
+  "integrantes": ["Jose David Palacio", "Johan Andrés Opsina", "Luis Fernando Valencia", "Juan José Pérez"],
+  "escenario": "1",
+  "usoDeIA": "No",
   "minutos": {
-    "instalacion": null,
-    "ca2": null,
-    "ca3": null
+    "instalacion": "3m",
+    "ca2": "30m",
+    "ca3": "30m"
   },
   "diagnostico": {
-    "diceQueFallo": null,
-    "esperadoYRecibido": null,
-    "lineaDeLaPrueba": null,
-    "capturaOVideo": null,
-    "trazaOInforme": null
+    "diceQueFallo": true,
+    "esperadoYRecibido": true,
+    "lineaDeLaPrueba": true,
+    "capturaOVideo": false,
+    "trazaOInforme": false
   },
   "notas": ""
 }

@@ -1,0 +1,44 @@
+{
+  "esquema": 1,
+  "equipo": "Cucumber",
+  "herramienta": "playwright",
+  "nombre": "Playwright Test (control)",
+  "fecha": "2026-10-28T06:30:09.682Z",
+  "entorno": {
+    "node": "v26.12.0",
+    "sistema": "win32 x64"
+  },
+  "corridas": {
+    "total": 5,
+    "completas": 5,
+    "conFallos": 0,
+    "segundos": [
+      3.39,
+      3.47,
+      3.47,
+      3.44,
+      3.46
+    ],
+    "mediana": 3.46,
+    "minimo": 3.39,
+    "maximo": 3.47
+  },
+  "pruebas": {
+    "esperadas": 3,
+    "pasanEnLaUltimaCorrida": 3
+  },
+  "codigo": {
+    "pruebas": 34,
+    "soporte": 14,
+    "total": 48
+  },
+  "paquetes": {
+    "@playwright/test": {
+      "instalada": "1.64.1",
+      "ultimaVersion": "1.64.1",
+      "ultimaPublicacion": "2026-10-14T11:58:13.696Z",
+      "dias": 13
+    }
+  },
+  "autoinforme": null
+}

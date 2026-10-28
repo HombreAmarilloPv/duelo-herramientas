@@ -1,0 +1,75 @@
+{
+  "esquema": 1,
+  "equipo": "Cucumber",
+  "herramienta": "playwright-cucumber",
+  "nombre": "Playwright + Cucumber (BDD)",
+  "fecha": "2026-10-28T06:26:27.413Z",
+  "entorno": {
+    "node": "v26.12.0",
+    "sistema": "win32 x64"
+  },
+  "corridas": {
+    "total": 5,
+    "completas": 5,
+    "conFallos": 0,
+    "segundos": [
+      3.35,
+      3.82,
+      4.08,
+      3.86,
+      3.1
+    ],
+    "mediana": 3.82,
+    "minimo": 3.1,
+    "maximo": 4.08
+  },
+  "pruebas": {
+    "esperadas": 3,
+    "pasanEnLaUltimaCorrida": 3
+  },
+  "codigo": {
+    "pruebas": 72,
+    "soporte": 37,
+    "total": 109
+  },
+  "paquetes": {
+    "@cucumber/cucumber": {
+      "instalada": "13.3.0",
+      "ultimaVersion": "13.3.0",
+      "ultimaPublicacion": "2026-10-05T08:15:24.936Z",
+      "dias": 22
+    },
+    "@playwright/test": {
+      "instalada": "1.64.1",
+      "ultimaVersion": "1.64.1",
+      "ultimaPublicacion": "2026-10-14T11:58:13.696Z",
+      "dias": 13
+    }
+  },
+  "autoinforme": {
+    "equipo": "Cucumber",
+    "integrantes": [
+      "Jose David Palacio",
+      "Johan Andrés Opsina",
+      "Luis Fernando Valencia",
+      "Juan José Pérez"
+    ],
+    "escenario": "1",
+    "usoDeIA": "No",
+    "minutos": {
+      "instalacion": "3m",
+      "ca2": "30m",
+      "ca3": "30m"
+    },
+    "diagnostico": {
+      "diceQueFallo": true,
+      "esperadoYRecibido": true,
+      "lineaDeLaPrueba": true,
+      "capturaOVideo": false,
+      "trazaOInforme": false
+    },
+    "notas": "",
+    "puntosDiagnostico": 3,
+    "sinResponder": 0
+  }
+}
