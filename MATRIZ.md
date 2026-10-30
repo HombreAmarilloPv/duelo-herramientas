@@ -1,7 +1,7 @@
 # Matriz de decisión
 
-**Equipo:** ______________________  
-**Escenario:** ______________________
+**Equipo:** Playwright 
+**Escenario:** Pagos Ágiles — Fintech que despliega varias veces al día
 
 Las tres opciones son las mismas de la presentación: **Selenium** (con Mocha en este duelo), **Cypress** y **Playwright**.
 La pregunta de si hace falta una capa BDD (Cucumber) por encima va aparte, en el `ADR.md`.
@@ -37,25 +37,24 @@ La pregunta de si hace falta una capa BDD (Cucumber) por encima va aparte, en el
 
 | Criterio | Peso | Selenium | Cypress | Playwright | ¿Por qué ese peso? · Evidencia de los puntajes |
 |---|---:|:---:|:---:|:---:|---|
-| 1 · Encaje | | | | | |
-| 2 · Cobertura | | | | | |
-| 3 · Estabilidad | | | | | |
-| 4 · Diagnóstico | | | | | |
-| 5 · Velocidad | | | | | |
-| 6 · Integración | | | | | |
-| 7 · Comunidad y futuro | | | | | |
-| 8 · Costo total | | | | | |
-| **Total ponderado** (máx. 5,00) | **100** | | | | |
-
-*(Pueden usar la calculadora de la clase —`matriz.html` en el sitio del duelo— y copiar la tabla.)*
+| 1 · Encaje | 15 | 4 | 5 | 5 | El equipo trabaja con TypeScript y React, por lo que necesita una herramienta fácil de integrar y aprender. |
+| 2 · Cobertura | 15 | 5 | 4 | 5 | Debe probar Chrome en computadores y Safari en iPhone, porque ambos son utilizados por sus clientes. |
+| 3 · Estabilidad | 20 | 3 | 3 | 4 | Es el criterio más importante: los falsos positivos pueden detener entre 5 y 10 despliegues diarios. |
+| 4 · Diagnóstico | 15 | 3 | 5 | 4 | No hay testers dedicados; los desarrolladores necesitan identificar rápidamente las causas de los errores. |
+| 5 · Velocidad | 15 | 3 | 4 | 5 | Las pruebas deben ejecutarse en menos de 10 minutos para no retrasar las entregas. |
+| 6 · Integración | 5 | 4 | 4 | 4 | Debe conectarse fácilmente al pipeline de integración continua. |
+| 7 · Comunidad y futuro | 5 | 5 | 4 | 4 | Conviene elegir una herramienta con documentación, actualizaciones y soporte de la comunidad. |
+| 8 · Costo total | 10 | 5 | 5 | 5 | No hay presupuesto para servicios de automatización de pago. |
+| **Total ponderado** (máx. 5,00) | **100** | **3,8** | **4,2** | **4,55** | Gana: Playwright |
 
 ## Prueba de sensibilidad
 
-- Criterio que subimos 10 puntos: ______________ (se lo bajamos a: ______________)
-- ¿Cambió el ganador? ☐ No ☐ Sí → ahora gana: ______________
+- Criterio que subimos 10 puntos: Cobertura y Velocidad (se lo bajamos a: Integración y Costo)
+- ¿Cambió el ganador? ☐ No ☐ Sí → ahora gana: No cambió
 - Lo que esto nos dice de nuestra decisión:
 
 ## Ganador de la matriz
 
-**______________________** con ______ puntos sobre 5,00.
-¿Coincide con lo que habríamos elegido antes de medir? ☐ Sí ☐ No → ¿qué cambió?
+**Playwright** con 4,55 puntos sobre 5,00.
+¿Coincide con lo que habríamos elegido antes de medir?
+Coincide con lo que habíamos eledigo.
