@@ -4,9 +4,9 @@
   "escenario": "1",
   "usoDeIA": "No",
   "minutos": {
-    "instalacion": "3m",
-    "ca2": "30m",
-    "ca3": "30m"
+    "instalacion": 2,
+    "ca2": 15,
+    "ca3": 40
   },
   "diagnostico": {
     "diceQueFallo": true,
